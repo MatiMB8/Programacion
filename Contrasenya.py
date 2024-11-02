@@ -27,25 +27,26 @@ else:
     if not password[2].isupper():
         print("Error en el tercer caracter")
         mal = True
-    if password[3] not in "_*@":
+    if password[3] not in "*_@":
         print("Error en el cuarto caracter")
         mal = True
     if not password[4].islower():
         print("Error en el quinto caracter")
         mal = True
-    if len(password) > 5 and (not password[5].isdigit() or not (6 <= int(password[5]) <= 9)):
+    if len(password) >= 5 and (not password[5].isdigit() or not (6 <= int(password[5]) <= 9)):
         print("Error en el sexto caracter")
         mal = True
 
 if var == 7:
-    if password[6] not in "#%/":
+   if password[6] not in "&/#":
         print("Error en el séptimo caracter")
         mal = True
-elif var == 8:
+if var == 8:
     if not password[7].isdigit() or not (0 <= int(password[7]) <= 5):
         print("Error en el último caracter")
         mal = True
 
 if not mal:
     print("El format del PASSWORD és correcte")
+
 
