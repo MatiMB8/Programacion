@@ -42,6 +42,9 @@ if var == 7:
         print("Error en el séptimo caracter")
         mal = True
 if var == 8:
+    if password[6] not in "&/#":
+        print("Error en el séptimo caracter")
+        mal = True
     if not password[7].isdigit() or not (0 <= int(password[7]) <= 5):
         print("Error en el último caracter")
         mal = True
